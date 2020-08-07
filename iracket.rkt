@@ -33,7 +33,7 @@
                  ;; [sandbox-make-logger current-logger]
                  ;; [sandbox-eval-handlers (list #f call-with-custodian-shutdown)]
                  ;; -- Retain default, because trusted is too relaxed:
-                 ;; [sandbox-security-guard      _] ;; trusted = current-security-guard
+                 [sandbox-security-guard      current-security-guard] ;; trusted = current-security-guard
                  ;; [sandbox-exit-handler        _] ;; trusted = (exit-handler)
                  ;; [sandbox-make-inspector      _] ;; trusted = current-inspector
                  ;; [sandbox-make-code-inspector _] ;; trusted = current-code-inspector
